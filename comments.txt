@@ -1,0 +1,5 @@
+Question 1
+This is missing a few parts of the question. The code you have does not loop to continue asking the user to guess numbers.
+
+Question 2
+You only copy and pasted the original code. You did not modify it.
