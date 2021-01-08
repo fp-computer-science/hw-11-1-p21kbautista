@@ -2,19 +2,25 @@
 
 from random import randint
 
+num1 = randint(0, 50)
 
-def random_number():
-    player = int(input("Guess a random number from 0-50: "))
-    computer = randint(0, 50)
+while True:
+    num2 = input("Pick a number between 0 and 50, which one am I thinking? ")
 
-    if player < computer:
-        print("Go higher")
-    if player > computer:
-        print("Go lower")
+    if num2 == "stop":
+        print("The number was {0}.".format(num1))
+        break
 
+    if num2.isdigit():
+        num3 = int(num2)
+    else:
+        print("Enter a number:")
+        continue
 
-
-
-
-#for number in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
-#    if number
+    if num3 > num1:
+        print("Lower")
+    elif num3 < num1:
+        print("Higher")
+    else:
+        print("You guessed {0}. That is correct".format(num3))
+        break
